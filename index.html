@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checklist Harian Sixpack</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .day {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Checklist Harian Program Sixpack</h1>
+
+  <script>
+    const latihan = [
+      "HIIT 15–20 menit",
+      "Latihan Perut (Abs Core) 15 menit",
+      "Stretching 5 menit",
+      "Menu makan sehat (pagi, siang, malam, snack)",
+      "Minum air putih min. 3 liter",
+      "Tidur minimal 7 jam"
+    ];
+
+    for (let i = 1; i <= 14; i++) {
+      document.write(`<div class='day'>
+        <h2>Hari ${i}</h2>`);
+      latihan.forEach((item, idx) => {
+        document.write(`<label><input type='checkbox'> ${item}</label>`);
+      });
+      document.write('</div>');
+    }
+  </script>
+</body>
+</html>
